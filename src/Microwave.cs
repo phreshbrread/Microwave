@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 
@@ -13,25 +6,13 @@ namespace Microwave
 {
     public partial class Microwave: Form
     {
-        bool microwaveOn = false;
+        int secondsToCook = 0;
+        bool cooking = false;
+        SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.Microwave_Hum_1_Second);
 
         public Microwave()
         {
             InitializeComponent();
-        }
-
-        private void StartButton_Click(object sender, EventArgs e)
-        {
-            SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.Microwave_Hum_1_Second);
-            if (microwaveOn == true)
-            {
-                return;
-            }
-            else
-            {
-                soundPlayer.PlayLooping();
-                microwaveOn = true;
-            }
         }
 
         private void ButtonN1_Click(object sender, EventArgs e)
@@ -74,7 +55,50 @@ namespace Microwave
 
         void NumberButtonPress(string number)
         {
-            LabelNumber.Text = number;
+            secondsToCook += Convert.ToInt32(number);
+            SecondsToCookBox.Text = Convert.ToString(secondsToCook);
+        }
+
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+            StartOrStopPress("Start");
+        }
+
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            StartOrStopPress("Stop");
+        }
+
+        void StartOrStopPress(string startOrStop)
+        {
+            if(startOrStop == "Start")
+            {
+                if (cooking == true)
+                {
+                    return;
+                }
+                else
+                {
+                    soundPlayer.PlayLooping();
+                    cooking = true;
+                }
+            }else if (startOrStop == "Stop")
+            {
+                if (cooking == false)
+                {
+                    return;
+                }
+                else
+                {
+                    soundPlayer.Stop();
+                    cooking = false;
+                }
+            }
+        }
+
+        void Cook()
+        {
+
         }
     }
 }

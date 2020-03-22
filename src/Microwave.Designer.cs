@@ -39,11 +39,12 @@
             this.ButtonN3 = new System.Windows.Forms.Button();
             this.ButtonN6 = new System.Windows.Forms.Button();
             this.ButtonN9 = new System.Windows.Forms.Button();
-            this.LabelNumber = new System.Windows.Forms.Label();
+            this.SecondsToCookBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // StartButton
             // 
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartButton.Location = new System.Drawing.Point(541, 264);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(120, 120);
@@ -54,15 +55,18 @@
             // 
             // StopButton
             // 
+            this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StopButton.Location = new System.Drawing.Point(667, 264);
             this.StopButton.Name = "StopButton";
             this.StopButton.Size = new System.Drawing.Size(120, 120);
             this.StopButton.TabIndex = 1;
             this.StopButton.Text = "Stop";
             this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // ButtonN7
             // 
+            this.ButtonN7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN7.Location = new System.Drawing.Point(541, 180);
             this.ButtonN7.Name = "ButtonN7";
             this.ButtonN7.Size = new System.Drawing.Size(78, 78);
@@ -73,6 +77,7 @@
             // 
             // ButtonN4
             // 
+            this.ButtonN4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN4.Location = new System.Drawing.Point(541, 96);
             this.ButtonN4.Name = "ButtonN4";
             this.ButtonN4.Size = new System.Drawing.Size(78, 78);
@@ -83,6 +88,7 @@
             // 
             // ButtonN1
             // 
+            this.ButtonN1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN1.Location = new System.Drawing.Point(541, 12);
             this.ButtonN1.Name = "ButtonN1";
             this.ButtonN1.Size = new System.Drawing.Size(78, 78);
@@ -93,6 +99,7 @@
             // 
             // ButtonN2
             // 
+            this.ButtonN2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN2.Location = new System.Drawing.Point(625, 12);
             this.ButtonN2.Name = "ButtonN2";
             this.ButtonN2.Size = new System.Drawing.Size(78, 78);
@@ -103,6 +110,7 @@
             // 
             // ButtonN5
             // 
+            this.ButtonN5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN5.Location = new System.Drawing.Point(625, 96);
             this.ButtonN5.Name = "ButtonN5";
             this.ButtonN5.Size = new System.Drawing.Size(78, 78);
@@ -113,6 +121,7 @@
             // 
             // ButtonN8
             // 
+            this.ButtonN8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN8.Location = new System.Drawing.Point(625, 180);
             this.ButtonN8.Name = "ButtonN8";
             this.ButtonN8.Size = new System.Drawing.Size(78, 78);
@@ -123,6 +132,7 @@
             // 
             // ButtonN3
             // 
+            this.ButtonN3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN3.Location = new System.Drawing.Point(709, 12);
             this.ButtonN3.Name = "ButtonN3";
             this.ButtonN3.Size = new System.Drawing.Size(78, 78);
@@ -133,6 +143,7 @@
             // 
             // ButtonN6
             // 
+            this.ButtonN6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN6.Location = new System.Drawing.Point(709, 96);
             this.ButtonN6.Name = "ButtonN6";
             this.ButtonN6.Size = new System.Drawing.Size(78, 78);
@@ -143,6 +154,7 @@
             // 
             // ButtonN9
             // 
+            this.ButtonN9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonN9.Location = new System.Drawing.Point(709, 180);
             this.ButtonN9.Name = "ButtonN9";
             this.ButtonN9.Size = new System.Drawing.Size(78, 78);
@@ -151,21 +163,21 @@
             this.ButtonN9.UseVisualStyleBackColor = true;
             this.ButtonN9.Click += new System.EventHandler(this.ButtonN9_Click);
             // 
-            // LabelNumber
+            // SecondsToCookBox
             // 
-            this.LabelNumber.AutoSize = true;
-            this.LabelNumber.Location = new System.Drawing.Point(110, 77);
-            this.LabelNumber.Name = "LabelNumber";
-            this.LabelNumber.Size = new System.Drawing.Size(35, 13);
-            this.LabelNumber.TabIndex = 11;
-            this.LabelNumber.Text = "label1";
+            this.SecondsToCookBox.Font = new System.Drawing.Font("Consolas", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondsToCookBox.Location = new System.Drawing.Point(12, 12);
+            this.SecondsToCookBox.Name = "SecondsToCookBox";
+            this.SecondsToCookBox.Size = new System.Drawing.Size(523, 46);
+            this.SecondsToCookBox.TabIndex = 12;
+            this.SecondsToCookBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Microwave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 396);
-            this.Controls.Add(this.LabelNumber);
+            this.Controls.Add(this.SecondsToCookBox);
             this.Controls.Add(this.ButtonN3);
             this.Controls.Add(this.ButtonN6);
             this.Controls.Add(this.ButtonN9);
@@ -197,7 +209,7 @@
         private System.Windows.Forms.Button ButtonN3;
         private System.Windows.Forms.Button ButtonN6;
         private System.Windows.Forms.Button ButtonN9;
-        private System.Windows.Forms.Label LabelNumber;
+        private System.Windows.Forms.TextBox SecondsToCookBox;
     }
 }
 
