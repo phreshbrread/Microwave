@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.StartButton = new System.Windows.Forms.Button();
-            this.StopButton = new System.Windows.Forms.Button();
+            this.StopResetButton = new System.Windows.Forms.Button();
             this.ButtonN7 = new System.Windows.Forms.Button();
             this.ButtonN4 = new System.Windows.Forms.Button();
             this.ButtonN1 = new System.Windows.Forms.Button();
@@ -57,17 +57,17 @@
             this.StartButton.UseVisualStyleBackColor = true;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
-            // StopButton
+            // StopResetButton
             // 
-            this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StopButton.Location = new System.Drawing.Point(889, 325);
-            this.StopButton.Margin = new System.Windows.Forms.Padding(4);
-            this.StopButton.Name = "StopButton";
-            this.StopButton.Size = new System.Drawing.Size(160, 148);
-            this.StopButton.TabIndex = 1;
-            this.StopButton.Text = "Stop";
-            this.StopButton.UseVisualStyleBackColor = true;
-            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
+            this.StopResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StopResetButton.Location = new System.Drawing.Point(889, 325);
+            this.StopResetButton.Margin = new System.Windows.Forms.Padding(4);
+            this.StopResetButton.Name = "StopResetButton";
+            this.StopResetButton.Size = new System.Drawing.Size(160, 148);
+            this.StopResetButton.TabIndex = 1;
+            this.StopResetButton.Text = "Reset";
+            this.StopResetButton.UseVisualStyleBackColor = true;
+            this.StopResetButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // ButtonN7
             // 
@@ -218,7 +218,7 @@
             this.Controls.Add(this.ButtonN1);
             this.Controls.Add(this.ButtonN4);
             this.Controls.Add(this.ButtonN7);
-            this.Controls.Add(this.StopButton);
+            this.Controls.Add(this.StopResetButton);
             this.Controls.Add(this.StartButton);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Microwave";
@@ -231,7 +231,7 @@
         #endregion
 
         private System.Windows.Forms.Button StartButton;
-        private System.Windows.Forms.Button StopButton;
+        private System.Windows.Forms.Button StopResetButton;
         private System.Windows.Forms.Button ButtonN7;
         private System.Windows.Forms.Button ButtonN4;
         private System.Windows.Forms.Button ButtonN1;
