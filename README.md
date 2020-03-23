@@ -2,6 +2,8 @@
 Literally just a UI microwave that serves no purpose
 
 ### Changelog
+- Removed an unnecessary and confusing void funtion
+- Added Exception handling
 - Added a timer countdown
 - Improved UI
 - Added number button funtions
@@ -10,4 +12,5 @@ Literally just a UI microwave that serves no purpose
 - Finish Code
 - Finish UI
 - Improve UI more
-- Cleanup and optimise
+- Cleanup and label code
+- Optimise
