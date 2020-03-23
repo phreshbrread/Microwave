@@ -1,5 +1,5 @@
 # Microwave
-Literally just a UI microwave that serves no purpose
+Literally just a WinForms-based UI microwave thing that serves no purpose
 
 ## Changelog
 ### v0.6
