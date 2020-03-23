@@ -10,7 +10,6 @@ namespace Microwave
         // declare variables
         int secondsToCook = 0;
         bool cooking = false;
-        bool finished = true;
         int timesBeeped = 0;
         
         SoundPlayer humSoundPlayer = new SoundPlayer(Properties.Resources.Microwave_Hum_1_Second);
@@ -72,42 +71,33 @@ namespace Microwave
         #region Start & Stop button click voids
         private void StartButton_Click(object sender, EventArgs e)
         {
-            StartOrStopPress("Start");
+            StopResetButton.Text = "Stop";
+            if (cooking == true)
+            {
+                // add something to add a minute to the cook timer
+                return;
+            }
+            else
+            {
+                CookTimer.Enabled = true;
+            }
         }
 
         private void StopButton_Click(object sender, EventArgs e)
         {
-            StartOrStopPress("Stop");
-        }
-        #endregion
-
-        void StartOrStopPress(string startOrStop)
-        {
-            if(startOrStop == "Start")
+            StopResetButton.Text = "Reset";
+            if (cooking == false)
             {
-                if (cooking == true)
-                {
-                    // add something to add a minute to the cook timer
-                    return;
-                }
-                else
-                {
-                    CookTimer.Enabled = true;
-                }
-            }else if (startOrStop == "Stop")
+                return;
+            }
+            else
             {
-                if (cooking == false)
-                {
-                    return;
-                }
-                else
-                {
-                    humSoundPlayer.Stop();
-                    CookTimer.Enabled = false;
-                    cooking = false;
-                }
+                humSoundPlayer.Stop();
+                CookTimer.Enabled = false;
+                cooking = false;
             }
         }
+        #endregion
 
         private void CookTimer_Tick(object sender, EventArgs e)
         {
