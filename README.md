@@ -7,7 +7,9 @@ Literally just a UI microwave that serves no purpose
 - Added Exception handling
 ### v0.5
 - Added a timer countdown
+### v0.4
 - Improved UI
+### v0.3
 - Added number button funtions
 
 ## Todo
