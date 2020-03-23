@@ -185,7 +185,9 @@
             this.SecondsToCookBox.Name = "SecondsToCookBox";
             this.SecondsToCookBox.Size = new System.Drawing.Size(696, 56);
             this.SecondsToCookBox.TabIndex = 12;
+            this.SecondsToCookBox.Text = "0";
             this.SecondsToCookBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SecondsToCookBox.TextChanged += new System.EventHandler(this.SecondsToCookBox_TextChanged);
             // 
             // label1
             // 
